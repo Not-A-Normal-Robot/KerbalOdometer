@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    background-color: #030303;
+    color: white;
+    min-width: fit-content;
+    min-height: 100vh;
+}
+
+.odo {
+    display: flex;
+    flex-direction: row;
+    font-size: 4em;
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+    padding: 0.1ch;
+    border: 0.05ch solid white;
+    pointer-events: none;
+    user-select: none;
+    caret-color: transparent;
+}
+
+.odo.neg {
+    color: #A11;
+}
+
+.odo .digit {
+    position: relative;
+    width: 1ch;
+    height: 1lh;
+    padding-inline: 0.16ch;
+    background: linear-gradient(to bottom, grey, white, grey);
+    border: 0.1ch solid black;
+    overflow: hidden;
+    word-break: break-all;
+    --digit: 0;
+}
+
+.odo .digit:before {
+    position: absolute;
+    bottom: 0;
+    content: '098765432109';
+    transform: translateY(calc(var(--digit) * 1lh + 1lh));
+    transition: transform 50ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.odo .digit.red {
+    background: linear-gradient(to bottom, #811, #e55, #811);
+    color: white;
+}
+
+.odo .digit.red:before {
+    content: 'mXYZEPTGMKmX';
+}
+
+.odo .digit:nth-child(7) {
+
+}

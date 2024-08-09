@@ -1,0 +1,2 @@
+# Kerbal Odometer
+My attempt at replicating the odometer near the top of the flight scene screen in Kerbal Space Program. You can input an altitude, and it'll show it just like how Kerbal Space Program's odometer would... or at least, my attempt at getting reasonably close to it.

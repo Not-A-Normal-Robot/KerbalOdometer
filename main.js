@@ -29,7 +29,7 @@ function update() {
     /** @type number[] */
     let digits = [];
 
-    while(Math.log10(num) >= digitElements.length - 1) {
+    while(Math.log10(Math.round(num)) >= digitElements.length - 1) {
         num = Math.round(num / 1000);
         divisorLog1000++;
     }
